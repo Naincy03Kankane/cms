@@ -16,16 +16,25 @@ namespace WebApplication1
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             char g;
             if (male.Checked == true)
                 g = 'M';
             else
                 g = 'F';
-            db.inusr(TextBox1.Text,TextBox2.Text,TextBox3.Text,g,"17-08-1998",TextBox6.Text,'R'.ToString());
+            db.inusr(TextBox1.Text, TextBox2.Text, TextBox3.Text, g, TextBox5.Text, TextBox6.Text, 'R'.ToString());
             Response.Redirect("login.aspx");
-            
+
         }
+
+        
+
+       
+
+        
+
+        
     }
 }

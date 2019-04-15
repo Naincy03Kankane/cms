@@ -68,7 +68,7 @@
             <td>
                 &nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" style="width: 74px" />
+                <asp:Button ID="Button1" runat="server" Text="Submit"  style="width: 74px" OnClick="Button1_Click1"  />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
