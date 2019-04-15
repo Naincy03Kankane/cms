@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_cms" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;Initial Catalog=db_cms;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="db_cmsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tb_user" Member="tb_users">
+    <Type Name="tb_user">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ueml" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="upwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ugen" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="udob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="umb" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usts" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.chgpwd" Method="chgpwd">
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="op" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="np" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delusr" Method="delusr">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.findusr" Method="findusr">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="findusrResult">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ueml" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="upwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ugen" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="udob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="umb" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usts" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.frgpwd" Method="frgpwd">
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mb" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="frgpwdResult">
+      <Column Name="upwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.inusr" Method="inusr">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pwd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dob" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mb" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sts" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.logchk" Method="logchk">
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pwd" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.selectusr" Method="selectusr">
+    <ElementType Name="selectusrResult">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ueml" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="upwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ugen" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="udob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="umb" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usts" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.updusr" Method="updusr">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pwd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dob" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mb" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sts" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

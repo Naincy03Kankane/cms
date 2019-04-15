@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="WebApplication1.Site2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Content Management System</title>
+<meta name="keywords" content="clean blog template, html css layout" />
+<meta name="description" content="Clean Blog Template is provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link href="s3slider.css" rel="stylesheet" type="text/css" />
+<!-- JavaScripts-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/s3Slider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#slider').s3Slider({
+            timeOut: 1600
+        });
+    });
+</script>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+<div id="templatemo_wrapper">
+
+	<div id="templatemo_menu">
+                
+        <ul>
+            <li><a href="home.aspx" class="current">Home</a></li>
+            <li><a href="about.aspx" class="current">About Us</a></li>
+            <li><a href="signup.aspx" class="current">Signup</a></li>
+            <li><a href="login.aspx" class="current">Login</a></li>
+        </ul>	
+    
+    </div> <!-- end of templatemo_menu -->
+
+    <div id="templatemo_left_column">
+    
+        <div id="templatemo_header">
+        
+            <div id="site_title">
+                <h1><a href="http://www.templatemo.com" target="_parent">CMS <strong>project</strong><span>content management system<span></a></h1>
+            </div><!-- end of site_title -->
+            
+        </div> 
+        <div id="templatemo_sidebar">
+    	
+            <div id="templatemo_rss">
+            
+                &nbsp;</div>
+              
+             <h4>Templates</h4>
+            <ul class="templatemo_list">
+                <li><a href="http://www.templatemo.com/page/1" target="_parent">HTML5 CSS Templates</a></li>
+                <li><a href="http://www.templatemo.com/page/2" target="_parent">Website Templates </a>1</li>
+                <li><a href="http://www.templatemo.com/page/3" target="_parent">Website Templates </a>2</li>
+                <li><a href="http://www.templatemo.com/page/4" target="_parent">Website Templates </a>3</li>
+            </ul>
+            
+            <div class="cleaner_h40"></div>
+             <h4>Themes</h4>
+           <ul class="templatemo_list">
+                <li><a href="http://www.templatemo.com" target="_parent">Free CSS Themes</a></li>
+                <li><a href="http://www.flashmo.com" target="_parent">Flash Themes</a></li>
+                <li><a href="http://www.flashmo.com/store" target="_parent">Premium Themes</a></li>
+                <li><a href="http://www.webdesignmo.com/blog" target="_parent">Web Design Blog</a></li>
+            </ul>
+            
+        </div> 
+    
+    </div> 
+    
+    <div id="templatemo_right_column">
+    
+    	<div id="featured_project">
+            <div id="slider">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        
+        <div id="templatemo_main">
+        
+            
+                
+            
+		</div>
+    
+  <div class="cleaner"></div>
+  </div> 
+    <!-- end of templatemo_main -->
+  <div class="cleaner_h20"></div>
+  
+  	<div id="templatemo_footer">
+    
+		Copyright © 2019 CMS Project | 
+        <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">&nbsp;CSS Templates</a>
+        
+    </div>
+  
+    <div class="cleaner"></div>
+</div> <!-- end of warpper -->
+
+
+    </form>
+</body>
+</html>
